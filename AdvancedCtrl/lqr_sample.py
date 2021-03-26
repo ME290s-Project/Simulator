@@ -26,7 +26,7 @@ def solve_DARE_with_iteration(A,B,Q,R):
     X = Q  
     maxiter  = 150 
     eps = 0.01 
-    for i in range(maxiter):
+    for _ in range(maxiter):
         Xn = A.T * X * A - A.T * X * B * la.inv(R +B.T * X *B) *B.T * X * A + Q 
         if (abs(Xn - X )).max() < eps:
             X = Xn 
