@@ -1,6 +1,8 @@
 ''' 
 A rocket simulation game 
 For Berkeley MEC 290S
+GOAL:  Launch the rocket and land it safely at the other launchpad!  
+        You must land the rocket slowly and upright, and must stay within the screen area, or it will crash.
  '''
 
 from __future__ import print_function, division
@@ -167,9 +169,7 @@ class RocketSimulatorWindow(AnimationWindow):
         )  # the bottom ground
         self.launchpad_start.draw()
         self.launchpad_destination.draw()
-        instructions = """GOAL:  Launch the rocket and land it safely at the other launchpad!
-            You must land the rocket slowly and upright, and must stay within the screen area, or it will crash.
-
+        instructions = """
             CONTROLS:
             e\t\t-  fire main engine (normal throttle)
             w\t\t-  fire main engine (max throttle)
